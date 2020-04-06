@@ -14,7 +14,7 @@ function validateRepositoryId(request, response, next) {
   const repoIndex = getRepoIndex(request.params.id);
 
   if (repoIndex < 0)
-    return response.status(400).json({ error: "Invalid project Id"});
+    return response.status(400).json({ error: "Repository not found"});
 
   return next();
 }
